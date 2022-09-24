@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 public class MyStack<T> {
     private ArrayList<T> stack = new ArrayList<T>();
 
