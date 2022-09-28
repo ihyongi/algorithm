@@ -1,5 +1,7 @@
+package fastcampus;
+
 public class Test {
     public static void main(String[] args) {
-        System.out.println("Testt");
+        System.out.println("fastcampus.Test");
     }
 }

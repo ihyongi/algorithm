@@ -1,3 +1,5 @@
+package fastcampus;
+
 public class SingleLinkedList<T> {
     public Node<T> head = null;
 
@@ -84,7 +86,7 @@ public class SingleLinkedList<T> {
     }
 
     public static void main(String[] args) {
-//        SingleLinkedList<Integer> MyLinkedList = new SingleLinkedList<Integer>();
+//        fastcampus.SingleLinkedList<Integer> MyLinkedList = new fastcampus.SingleLinkedList<Integer>();
 //        MyLinkedList.addNode(1);
 //
 //        System.out.println(MyLinkedList.head.data);
@@ -93,7 +95,7 @@ public class SingleLinkedList<T> {
 //
 //        MyLinkedList.printAll();
 
-//        SingleLinkedList<Integer> MyLinkedList = new SingleLinkedList<Integer>();
+//        fastcampus.SingleLinkedList<Integer> MyLinkedList = new fastcampus.SingleLinkedList<Integer>();
 //        MyLinkedList.addNode(1);
 //        MyLinkedList.addNode(2);
 //        MyLinkedList.addNode(3);
