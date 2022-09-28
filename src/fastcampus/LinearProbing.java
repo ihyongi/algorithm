@@ -1,3 +1,5 @@
+package fastcampus;
+
 import java.util.HashMap;
 
 public class LinearProbing {

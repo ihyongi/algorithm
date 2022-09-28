@@ -1,3 +1,5 @@
+package fastcampus;
+
 public class NodeMgmt {
     Node head = null;
 

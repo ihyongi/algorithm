@@ -1,3 +1,5 @@
+package fastcampus;
+
 public class MyHash {
     public Slot[] hashTable;
 

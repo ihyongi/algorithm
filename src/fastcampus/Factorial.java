@@ -1,3 +1,5 @@
+package fastcampus;
+
 public class Factorial {
     /**
      * O(1)

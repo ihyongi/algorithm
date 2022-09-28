@@ -1,3 +1,5 @@
+package fastcampus;
+
 import java.util.ArrayList;
 
 public class MyStack2<T> {

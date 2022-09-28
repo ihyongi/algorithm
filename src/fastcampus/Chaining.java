@@ -1,3 +1,5 @@
+package fastcampus;
+
 public class Chaining {
     public Slot[] hashTable;
 

@@ -1,3 +1,5 @@
+package fastcampus;
+
 public class DoubleLinkedList<T> {
     public static void main(String[] args) {
         DoubleLinkedList<Integer> MyLinkedList = new DoubleLinkedList<Integer>();

@@ -1,3 +1,4 @@
+package fastcampus;
 
 public class SingleLinkedList2<T> {
 

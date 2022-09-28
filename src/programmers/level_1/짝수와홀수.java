@@ -1,4 +1,4 @@
-package level_1;
+package programmers.level_1;
 
 public class 짝수와홀수 {
     /**

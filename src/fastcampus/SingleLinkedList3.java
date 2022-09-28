@@ -1,3 +1,5 @@
+package fastcampus;
+
 public class SingleLinkedList3<T> {
 
     private Node<T> head = null;

@@ -1,3 +1,5 @@
+package fastcampus;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -146,10 +148,10 @@ public Integer pop() {
 
 
     public static void main(String[] args) {
-//        Heap heapTest = new Heap(1);
+//        fastcampus.Heap heapTest = new fastcampus.Heap(1);
 //        System.out.println(heapTest.heapArray);
 //
-//        Heap heapTest1 = new Heap(1);
+//        fastcampus.Heap heapTest1 = new fastcampus.Heap(1);
 //        heapTest1.insert(2);
 //        heapTest1.insert(3);
 //        heapTest1.insert(4);
@@ -163,7 +165,7 @@ public Integer pop() {
 //        Collections.swap(heapArray, 0, 1);
 //        System.out.println(heapArray);
 
-//        Heap heapTest3 = new Heap(15);
+//        fastcampus.Heap heapTest3 = new fastcampus.Heap(15);
 //        heapTest3.insert(10);
 //        heapTest3.insert(8);
 //        heapTest3.insert(5);
