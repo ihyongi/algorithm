@@ -2,7 +2,7 @@ package fastcampus;
 
 import java.util.ArrayList;
 
-public class MyQueue2<T> {
+public class MyQueue3<T> {
 
     private ArrayList<T> queue = new ArrayList<>();
 
@@ -17,17 +17,13 @@ public class MyQueue2<T> {
         return queue.remove(0);
     }
 
-    public boolean isEmpty(){
-        return queue.isEmpty();
-    }
-
     public static void main(String[] args) {
-        MyQueue2<Integer> mq = new MyQueue2<>();
+        MyQueue3<Integer> mq = new MyQueue3<Integer>();
         mq.enqueue(1);
         mq.enqueue(2);
         mq.enqueue(3);
         System.out.println(mq.dequeue());
         System.out.println(mq.dequeue());
-//        System.out.println(mq.dequeue());
+        System.out.println(mq.dequeue());
     }
 }

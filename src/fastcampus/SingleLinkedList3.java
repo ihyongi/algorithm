@@ -1,53 +1,52 @@
 package fastcampus;
 
+
 public class SingleLinkedList3<T> {
+    public Node<T> head = null;
 
-    private Node<T> head = null;
-
-    public class Node<T>{
+    public class Node<T> {
         T data;
-        Node next;
+        Node<T> next = null;
 
-        public Node (T data){
+        public Node(T data){
             this.data = data;
         }
     }
 
     public void addNode(T data){
-        if (this.head == null) {
-            this.head = new Node<>(data);
-        }
-        else{
+        if(head == null){
+            head = new Node<T>(data);
+        }else{
             Node<T> node = this.head;
-            while(node.next != null){
-            node = node.next;
+            while (node.next != null){
+                node = node.next;
             }
             node.next = new Node<>(data);
         }
     }
 
     public void printAll(){
-        if(this.head != null){
+        if (head != null) {
             Node<T> node = this.head;
-            System.out.println("node = " + node);
-            while (node.next != null) {
+            System.out.println("head = "+ node.data);
+            while(node.next != null){
                 node = node.next;
-                System.out.println("node = " + node);
+                System.out.println("next = "+ node.data);
             }
         }
     }
 
-    public Node<T> search(T data) {
+    public Node<T> search (T data){
         if (this.head == null) {
             return null;
         }
         else{
             Node<T> node = this.head;
-            while (node != null){
-                if (node.data == data) {
+            while (node.next != null){
+                if(node.data == data){
                     return node;
                 }else{
-                    node = node.next;
+                node = node.next;
                 }
             }
             return null;
@@ -55,13 +54,14 @@ public class SingleLinkedList3<T> {
     }
 
     public void addNodeInside(T data, T isData){
-        Node<T> searchData = this.search(data);
-        if(searchData ==null){
+        Node<T> searchNode = this.search(isData);
+        if(searchNode == null){
             this.addNode(data);
-        }else{
-            Node nextNode = searchData.next;
-            searchData.next = new Node<>(data);
-            searchData.next.next = nextNode;
+        }
+        else{
+            Node<T> next = searchNode.next;
+            searchNode.next = new Node<>(data);
+            searchNode.next.next = next;
         }
     }
 
@@ -70,13 +70,12 @@ public class SingleLinkedList3<T> {
             return false;
         }else{
             Node<T> node = this.head;
-            if(node.data == isData){
+            if (node.data == isData){
                 this.head = this.head.next;
                 return true;
-            }
-            else{
-                while (node.next != null) {
-                    if (node.next.data == isData){
+            }else{
+                while (node.next != null){
+                    if(node.next.data == isData){
                         node.next = node.next.next;
                         return true;
                     }
@@ -87,5 +86,17 @@ public class SingleLinkedList3<T> {
         }
     }
 
+    public static void main(String[] args) {
+        SingleLinkedList3<Integer> MyLinkedList = new SingleLinkedList3<Integer>();
+        MyLinkedList.addNode(1);
+        MyLinkedList.addNode(2);
+        MyLinkedList.addNode(3);
+        MyLinkedList.addNode(4);
+        MyLinkedList.addNode(5);
 
+        MyLinkedList.printAll();
+        MyLinkedList.delNode(3);
+        MyLinkedList.delNode(1);
+        MyLinkedList.printAll();
+    }
 }

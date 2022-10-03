@@ -2,37 +2,37 @@ package fastcampus;
 
 public class SingleLinkedList2<T> {
 
-    public Node<T> head = null;
+    private Node<T> head = null;
 
-    public class Node<T> {
+    public class Node<T>{
         T data;
-        Node<T> next = null;
+        Node next;
 
-        public Node(T data){
+        public Node (T data){
             this.data = data;
         }
     }
 
-
     public void addNode(T data){
-        if (head == null) {
-            head = new Node<T>(data);
-        }else{
+        if (this.head == null) {
+            this.head = new Node<>(data);
+        }
+        else{
             Node<T> node = this.head;
-            while (node.next != null){
-                node = node.next;
+            while(node.next != null){
+            node = node.next;
             }
-            node.next = new Node<T>(data);
+            node.next = new Node<>(data);
         }
     }
 
     public void printAll(){
-        if (head != null){
+        if(this.head != null){
             Node<T> node = this.head;
-            System.out.println(node.data);
-            while (node.next != null){
+            System.out.println("node = " + node);
+            while (node.next != null) {
                 node = node.next;
-                System.out.println("node.data = " + node.data);
+                System.out.println("node = " + node.data);
             }
         }
     }
@@ -40,12 +40,13 @@ public class SingleLinkedList2<T> {
     public Node<T> search(T data) {
         if (this.head == null) {
             return null;
-        } else {
+        }
+        else{
             Node<T> node = this.head;
-            while (node != null) {
+            while (node != null){
                 if (node.data == data) {
                     return node;
-                } else {
+                }else{
                     node = node.next;
                 }
             }
@@ -53,30 +54,29 @@ public class SingleLinkedList2<T> {
         }
     }
 
-    public void addNodeInside(T data, T isData) {
-        Node<T> searchNode = this.search(isData);
-
-        if(searchNode == null) {
+    public void addNodeInside(T data, T isData){
+        Node<T> searchData = this.search(data);
+        if(searchData ==null){
             this.addNode(data);
         }else{
-            Node<T> nextNode = searchNode.next;
-            searchNode.next = new Node<T>(data);
-            searchNode.next.next = nextNode;
+            Node nextNode = searchData.next;
+            searchData.next = new Node<>(data);
+            searchData.next.next = nextNode;
         }
     }
 
-
-    public boolean delNode(T isData) {
-        if(this.head == null) {
+    public boolean delNode(T isData){
+        if (this.head == null) {
             return false;
-        }else {
+        }else{
             Node<T> node = this.head;
             if(node.data == isData){
                 this.head = this.head.next;
                 return true;
-            }else{
-                while(node.next != null){
-                    if(node.next.data == isData){
+            }
+            else{
+                while (node.next != null) {
+                    if (node.next.data == isData){
                         node.next = node.next.next;
                         return true;
                     }
@@ -100,4 +100,5 @@ public class SingleLinkedList2<T> {
         MyLinkedList.delNode(1);
         MyLinkedList.printAll();
     }
+
 }
