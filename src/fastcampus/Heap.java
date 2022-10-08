@@ -9,7 +9,6 @@ public class Heap {
 
     public Heap (Integer data) {
         heapArray = new ArrayList<Integer>();
-
         heapArray.add(null);
         heapArray.add(data);
     }
