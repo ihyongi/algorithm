@@ -66,6 +66,7 @@ public class Chaining {
         chaining.saveData("fun-coding", "01033334444");
         chaining.saveData("David", "01044445555");
         chaining.saveData("Dave", "01055556666");
-        chaining.getData("Dave");
+        System.out.println("chaining = " + chaining.getData("Dave"));
+        System.out.println("chaining = " + chaining.getData("David"));
     }
 }
