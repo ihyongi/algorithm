@@ -1,6 +1,6 @@
 package fastcampus;
 
-public class NodeMgmt {
+public class Tree_12 {
     Node head = null;
 
     public class Node {
@@ -208,7 +208,7 @@ public class NodeMgmt {
 
     public static void main(String[] args) {
         // Case3-1: 삭제할 Node가 Child Node를 두 개 가지고 있을 경우
-        NodeMgmt myTree = new NodeMgmt();
+        Tree_12 myTree = new Tree_12();
         myTree.insertNode(10);
         myTree.insertNode(15);
         myTree.insertNode(13);

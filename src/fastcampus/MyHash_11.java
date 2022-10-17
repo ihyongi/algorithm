@@ -1,9 +1,9 @@
 package fastcampus;
 
-public class MyHash {
+public class MyHash_11 {
     public Slot[] hashTable;
 
-    public MyHash(Integer size) {
+    public MyHash_11(Integer size) {
         this.hashTable = new Slot[size];
     }
 
@@ -39,14 +39,14 @@ public class MyHash {
 
     public static void main(String[] args) {
 
-        MyHash mainObject = new MyHash(20);
+        MyHash_11 mainObject = new MyHash_11(20);
         mainObject.saveData("DaveLee", "01022223333");
         mainObject.saveData("fun-coding", "01033334444");
         mainObject.getData("fun-coding"); //키값으로 가져옴
 
 
         //--충돌
-        MyHash mainObject2 = new MyHash(20);
+        MyHash_11 mainObject2 = new MyHash_11(20);
         mainObject2.saveData("DaveLee", "01022223333"); //D
         mainObject2.saveData("fun-coding", "01033334444");
         mainObject2.saveData("David", "01044445555"); //D

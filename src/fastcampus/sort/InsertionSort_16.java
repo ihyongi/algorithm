@@ -3,7 +3,7 @@ package fastcampus.sort;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class InsertionSort {
+public class InsertionSort_16 {
     /**
      * 1. for (int index = 0; index < dataList.size() - 1; index++) 로 반복
      * 2. 반복문 안에서, for (int index2 = index + 1; index2 > 0; index2--) 으로 반복
@@ -27,8 +27,8 @@ public class InsertionSort {
         for (int i = 0; i < 100; i++) {
             testData.add((int)(Math.random() * 100));
         }
-        BubbleSort bSort = new BubbleSort();
-        bSort.sort(testData);
-        System.out.println("bSort = " + bSort.sort(testData));
+        InsertionSort_16 iSort = new InsertionSort_16();
+        iSort.sort(testData);
+        System.out.println("iSort = " + iSort.sort(testData));
     }
 }

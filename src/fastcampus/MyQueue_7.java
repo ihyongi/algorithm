@@ -2,7 +2,7 @@ package fastcampus;
 
 import java.util.ArrayList;
 
-public class MyQueue<T> {
+public class MyQueue_7<T> {
     private ArrayList<T> queue = new ArrayList<T>();
 
     public void enqueue(T item) {
@@ -21,7 +21,7 @@ public class MyQueue<T> {
     }
 
     public static void main(String[] args) {
-        MyQueue<Integer> mq = new MyQueue<Integer>();
+        MyQueue_7<Integer> mq = new MyQueue_7<Integer>();
         mq.enqueue(1);
         mq.enqueue(2);
         mq.enqueue(3);

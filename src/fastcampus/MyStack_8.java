@@ -3,7 +3,7 @@ package fastcampus;
 import java.util.ArrayList;
 
 
-public class MyStack<T> {
+public class MyStack_8<T> {
     private ArrayList<T> stack = new ArrayList<T>();
 
     public void push(T item) {
@@ -22,7 +22,7 @@ public class MyStack<T> {
     }
 
     public static void main(String[] args) {
-        MyStack<Integer> ms = new MyStack<Integer>();
+        MyStack_8<Integer> ms = new MyStack_8<Integer>();
         ms.push(1);
         ms.push(2);
         System.out.println(ms.pop());

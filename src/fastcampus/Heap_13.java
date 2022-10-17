@@ -3,11 +3,11 @@ package fastcampus;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Heap {
+public class Heap_13 {
 
     public ArrayList<Integer> heapArray = null;
 
-    public Heap (Integer data) {
+    public Heap_13(Integer data) {
         heapArray = new ArrayList<Integer>();
         heapArray.add(null);
         heapArray.add(data);
@@ -172,15 +172,15 @@ public Integer pop() {
 //        heapTest3.insert(20);
 //        System.out.println(heapTest3.heapArray);
 
-        Heap heapTest = new Heap(15);
-        heapTest.insert(10);
-        heapTest.insert(8);
-        heapTest.insert(5);
-        heapTest.insert(4);
-        heapTest.insert(20);
-        System.out.println(heapTest.heapArray);
+        Heap_13 heap13Test = new Heap_13(15);
+        heap13Test.insert(10);
+        heap13Test.insert(8);
+        heap13Test.insert(5);
+        heap13Test.insert(4);
+        heap13Test.insert(20);
+        System.out.println(heap13Test.heapArray);
 
-        heapTest.pop();
-        System.out.println(heapTest.heapArray);
+        heap13Test.pop();
+        System.out.println(heap13Test.heapArray);
     }
 }

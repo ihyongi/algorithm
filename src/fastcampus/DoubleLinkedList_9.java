@@ -1,6 +1,6 @@
 package fastcampus;
 
-public class DoubleLinkedList<T> {
+public class DoubleLinkedList_9<T> {
     public Node<T> head = null;
     public Node<T> tail = null;
 
@@ -105,7 +105,7 @@ public class DoubleLinkedList<T> {
 
 
     public static void main(String[] args) {
-        DoubleLinkedList<Integer> MyLinkedList = new DoubleLinkedList<Integer>();
+        DoubleLinkedList_9<Integer> MyLinkedList = new DoubleLinkedList_9<Integer>();
 
         MyLinkedList.addNode(1);
         MyLinkedList.addNode(2);

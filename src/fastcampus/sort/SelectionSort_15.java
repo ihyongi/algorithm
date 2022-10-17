@@ -3,7 +3,7 @@ package fastcampus.sort;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class SelectionSort {
+public class SelectionSort_15 {
     /**
      * 1. for (int stand = 0; stand < dataList.size() - 1; stand++) 로 반복
      * 2. lowest = stand 로 놓고,
@@ -35,7 +35,7 @@ public class SelectionSort {
         for (int i = 0; i < 100; i++) {
             testData.add((int)(Math.random() * 100));
         }
-        SelectionSort sSort = new SelectionSort();
+        SelectionSort_15 sSort = new SelectionSort_15();
         System.out.println("sSort = " + sSort.sort(testData));
     }
 }
