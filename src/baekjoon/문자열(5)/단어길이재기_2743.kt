@@ -8,12 +8,12 @@ import java.util.*
 
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
 /**
- * 단어 $S$와 정수 $i$가 주어졌을 때, $S$의 $i$번째 글자를 출력하는 프로그램을 작성하시오.
+ * 알파벳으로만 이루어진 단어를 입력받아, 그 길이를 출력하는 프로그램을 작성하시오.
  */
 
     val w = BufferedWriter(OutputStreamWriter(System.out))
-    val strings = readLine().split("")
-    w.write("${strings[StringTokenizer(readLine()).nextToken().toInt()]}")
+    val s = readLine()!!.length
+    w.write("$s")
 
     w.flush()
     w.close()
