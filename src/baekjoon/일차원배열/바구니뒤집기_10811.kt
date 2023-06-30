@@ -25,7 +25,7 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
         val st = StringTokenizer(readLine()) //2~나머지줄
         val i = st.nextToken().toInt() - 1
         val j = st.nextToken().toInt() - 1
-        basket.reverse(i, i + (j-i+1)) //시작지점(fromIndex)에서 뒤집고 싶은 갯수를 더하면 계산할 수 있다
+        basket.reverse(i, i + (j - i + 1)) //시작지점(fromIndex)에서 뒤집고 싶은 갯수를 더하면 계산할 수 있다
     }
     basket.forEach { w.write("$it ") }
     w.flush()
