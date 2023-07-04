@@ -34,7 +34,7 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
         }
         result += "${cnt[0]} ${cnt[1]} ${cnt[2]} ${cnt[3]}\n"
     }
-    w.write("${result}")
+    w.write("$result")
     w.flush()
     w.close()
     close()
