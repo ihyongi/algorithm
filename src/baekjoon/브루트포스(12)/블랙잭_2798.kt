@@ -1,10 +1,9 @@
-package baekjoon.브루트포스
+package baekjoon.`브루트포스(12)`
 
 import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
-import java.util.*
 
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
 /**
