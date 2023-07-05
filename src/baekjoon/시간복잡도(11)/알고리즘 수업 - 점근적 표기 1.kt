@@ -17,6 +17,8 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
  * 첫째 줄에 함수 f(n)을 나타내는 정수 a1, a0가 주어진다. (0 ≤ |ai| ≤ 100)
  * 다음 줄에 양의 정수 c가 주어진다. (1 ≤ c ≤ 100)
  * 다음 줄에 양의 정수 n0가 주어진다. (1 ≤ n0 ≤ 100)
+ *
+ * 드럽게어렵네
  */
 
     val w = BufferedWriter(OutputStreamWriter(System.out))
