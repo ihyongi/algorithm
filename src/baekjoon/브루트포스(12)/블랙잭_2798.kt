@@ -17,14 +17,14 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val w = BufferedWriter(OutputStreamWriter(System.out))
     val(n, m) = readLine().split(" ").map(String::toInt)
     val array = readLine().split(" ").map(String::toInt).toTypedArray()
-    var sum = 0
+    var sum: Int
     var max = 0
 
     for (i in 0 until n){
         for(j in i+1 until n){
             for (k in j+1 until n){
                 sum = array[i]+array[j]+array[k]
-                if(sum > max && sum <= m) max = sum //M을 넘지 않으면서 M에 최대한 가까운지
+                if(sum in (max + 1)..m) max = sum //M을 넘지 않으면서 M에 최대한 가까운지
             }
         }
     }
