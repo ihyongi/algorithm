@@ -15,4 +15,16 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
  */
 
     val w = BufferedWriter(OutputStreamWriter(System.out))
+    var t= readLine().toInt()
+    while (t --> 0){
+        var result = ""
+        var arr = readLine().split(" ")
+        for(i in arr){
+            result += i.reversed() + ' '
+        }
+        w.write("$result\n")
+    }
+    w.flush()
+    w.close()
+    close()
 }
