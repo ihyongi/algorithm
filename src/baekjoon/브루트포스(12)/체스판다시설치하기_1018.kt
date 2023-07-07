@@ -18,9 +18,53 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
  *
  * 첫째 줄에 N과 M이 주어진다. N과 M은 8보다 크거나 같고, 50보다 작거나 같은 자연수이다.
  * 둘째 줄부터 N개의 줄에는 보드의 각 행의 상태가 주어진다. B는 검은색이며, W는 흰색이다.
+ *
+ *
+ * 너무 어려워.............
  */
 
     val w = BufferedWriter(OutputStreamWriter(System.out))
-    val(n, m) = readLine().split(" ").map(String::toInt)
+    val(row, col) = readLine().split(" ").map(String::toInt) //n줄에 m개
+    val box = Array(row) { IntArray(col) }
+    var min = row * col
 
+    // 시작점(0,0)을 흰색(W)으로 가정
+    // row + column = 짝수 -> W
+    // row + column = 홀수 -> B
+    for(i in 0 until row){
+        val line = readLine().toCharArray()
+        for(j in 0 until col){
+            if (((i+j) % 2 == 0 && line[j] != 'W') || ((i+j) % 2 != 0 && line[j] != 'B')) box[i][j]++ //다시칠해야할거
+            if (j > 0) box[i][j] += box[i][j-1]
+//            w.write("${box[i][j]} ")
+        }
+//            w.write("\n")
+    }
+
+    // 체스판의 시작점을 (i,j)로 잡고 8*8 체스판으로 자르면서 최소값 찾기
+    for (i in 0 .. row-8) {
+        for (j in 0 .. col-8) {
+            var count = 0
+
+            // 체스판 안에 다시 칠해야 하는 개수 계산
+            for (k in i until i+8) {
+                // 0칸부터 j+7칸 사이의 다시 칠해야 하는 칸 수
+                count += box[k][j+7]
+
+                // j칸 이전에 존재하는 다시 칠해야 하는 칸 수는 제외
+                if (j > 0) count -= box[k][j-1]
+            }
+
+            // 첫 칸을 흰색으로 가정했을 경우 칠해야 할 개수가 과반수를 넘는 경우
+            // 첫 칸을 검은색으로 가정하여 64에서 뺀 값을 칠해야 할 개수로 설정
+            if (count > 64 - count) count = 64 - count
+
+            // 최소값인 경우 min 값 업데이트
+            if (count < min) min = count
+        }
+    }
+    w.write("$min")
+    w.flush()
+    w.close()
+    close()
 }
