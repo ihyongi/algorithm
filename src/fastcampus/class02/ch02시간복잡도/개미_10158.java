@@ -29,7 +29,7 @@ class Main_10158 {
             else if(currentY == 0)deltaY =1;
             currentY += deltaY;
         }
-
+        //오잉
         System.out.println(currentX + " " + currentY);
 
 
