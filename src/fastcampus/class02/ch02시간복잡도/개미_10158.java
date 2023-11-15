@@ -30,6 +30,8 @@ class Main_10158 {
             currentY += deltaY;
         }
 
+        System.out.println(currentX + " " + currentY);
+
 
     }
 }
