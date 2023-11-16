@@ -84,5 +84,6 @@ class Main_1236 {
         }
         //3. 둘중 큰 값을 출력한다.
         System.out.println(Math.max(needColCnt,needRowCnt));
+        //시간복잡도 0(N*M)
     }
 }
