@@ -1,6 +1,6 @@
 package fastcampus.class02.ch03배열;
 
-import java.util.Scanner;
+import java.io.*;
 
 /**
  * 첫째 줄에 수의 개수 N(1 ≤ N ≤ 10,000,000)이 주어진다. 둘째 줄부터 N개의 줄에는 수가 주어진다.
@@ -16,19 +16,21 @@ import java.util.Scanner;
  * BufferedWriter사용!!
  */
 class Main_10989 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         //풀이1.. 시간초과
-        int n = sc.nextInt();
+        int n = Integer.parseInt(br.readLine());
         int[] cnt = new int[10001]; //수의범위만큼
         for (int i = 0; i < n; i++) {
-            cnt[sc.nextInt()] ++;
+            cnt[Integer.parseInt(br.readLine())] ++;
         }
 
         for (int i = 1; i <= 10000; i++) {
             while (cnt[i]-- > 0){
-                System.out.println(i);
+                bw.write(i+"\n");
             }
+            bw.flush();
         }
     }
 }
