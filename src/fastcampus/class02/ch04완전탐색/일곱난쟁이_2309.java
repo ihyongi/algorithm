@@ -10,33 +10,41 @@ class Main_2309 {
         for (int i = 0; i <9; i++) {
             h[i] = sc.nextInt();
         }
-        findDwarfs(h);
+        // 9명 중 7명의 키의 합이 100이 되는 경우 찾기
+        findAndPrintDwarfs(h);
     }
 
-    private static void findDwarfs(int[] heights) {
+    private static void findAndPrintDwarfs(int[] heights) {
         Arrays.sort(heights); // 키를 오름차순으로 정렬
-
-        // 9명 중 7명의 키의 합이 100이 되는 경우 찾기
         for (int i = 0; i < 8; i++) {
             for (int j = i + 1; j < 9; j++) {
-                int sum = 0;
-                for (int k = 0; k < 9; k++) {
-                    if (k != i && k != j) {
-                        sum += heights[k];
-                    }
-                }
-
-                if (sum == 100) {
-                    // 출력
-                    for (int k = 0; k < 9; k++) {
-                        if (k != i && k != j) {
-                            System.out.println(heights[k]);
-                        }
-                    }
+                int[] selectedDwarfs = getSelectedDwarfs(heights, i, j);
+                if (calculateSum(selectedDwarfs) == 100) {
+                    printDwarfs(selectedDwarfs);
                     return;
                 }
             }
         }
+    }
+
+    private static int[] getSelectedDwarfs(int[] heights, int excludeIndex1, int excludeIndex2) {
+        int[] selectedDwarfs = new int[7];
+        int index = 0;
+
+        for (int k = 0; k < 9; k++) {
+            if (k != excludeIndex1 && k != excludeIndex2) {
+                selectedDwarfs[index++] = heights[k];
+            }
+        }
+        return selectedDwarfs;
+    }
+
+    private static int calculateSum(int[] dwarfs) {
+        return Arrays.stream(dwarfs).sum();
+    }
+
+    private static void printDwarfs(int[] dwarfs) {
+        Arrays.stream(dwarfs).forEach(System.out::println);
     }
 
 }
